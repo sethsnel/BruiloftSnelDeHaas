@@ -1,27 +1,48 @@
 .container {
-  background: url('/roses.webp') no-repeat;
+  background: url('/roses.jpg') no-repeat;
   background-size: cover;
   width: 100%;
 }
 
-.divider {
-  background: #001E08;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.dividerwrapper {
+  max-height: 30vh;
+  overflow: hidden;
 
-  min-height: 150vh;
-  width: 80vw;
-  margin: 0 auto -135vh auto;
+  @media (max-width: 1024px) {
+    max-height: 50vh;
+  }
+  
+  .divider {
+    background: #001E08;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
+    width: 80vw;
+    min-height: 100vh;
+    margin: 0 auto -70vh auto;
+
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+
+    @media (max-width: 1024px) {
+      width: 100vw;
+      min-height: 100vh;
+      margin: 0 auto -40vh auto;
+    }
+
+    @media (max-width: 768px) {
+      width: 100vw;
+      min-height: 50vh;
+      margin: 0 auto -20vh auto;
+    }
+  }
 }
 
 .wrapper {
   width: 100%;
   background: #001E08;
-  min-height: 55vh;
+  min-height: 40vh;
 }
 
 .content {

@@ -1,9 +1,19 @@
+@font-face {
+  font-family: BrittanySignature;
+  src: url(/fonts/BrittanySignature.ttf);
+}
+
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   color: #DEA297;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: PlayfairDisplay, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 

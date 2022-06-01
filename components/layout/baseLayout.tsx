@@ -11,8 +11,10 @@ type baseLayoutProps = {
 const BaseLayout = ({ dividerText, children }: baseLayoutProps) => {
   return <div className={styles.container}>
   <Header />
-  <div className={styles.divider}>
-    <h1>{ dividerText }</h1>
+  <div className={styles.dividerwrapper}>
+    <div className={styles.divider}>
+      <h1>{ dividerText }</h1>
+    </div>
   </div>
   <div className={styles.wrapper}>
     <div className={styles.content}>
