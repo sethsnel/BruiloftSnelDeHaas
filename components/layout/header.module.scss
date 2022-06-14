@@ -35,6 +35,11 @@
       height: 50%;
 
       @media (max-width: 768px) {
+        height: 70%;
+        bottom: 1rem;
+      }
+
+      @media (max-width: 768px) {
         height: 60%;
         bottom: 1rem;
         left: 0.5rem;

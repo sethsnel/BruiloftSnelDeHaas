@@ -13,11 +13,11 @@ const BaseLayout = ({ dividerText, children }: baseLayoutProps) => {
   <Header />
   <div className={styles.dividerwrapper}>
     <div className={styles.divider}>
-      <h1>{ dividerText }</h1>
     </div>
   </div>
   <div className={styles.wrapper}>
     <div className={styles.content}>
+      <h1>{ dividerText }</h1>
       { children }
     </div>
   </div>
