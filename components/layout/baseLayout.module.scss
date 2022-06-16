@@ -3,7 +3,7 @@
   background-size: cover;
   width: 100%;
 
-  @media (max-width: 1240px) {
+  @media (max-width: 800px) {
     background-size: contain;
   }
 }
@@ -45,9 +45,11 @@
 
 .wrapper {
   width: 100%;
-  min-height: 70vh;
+  min-height: 75vh;
   margin-top: -30vh;
-  padding-top: 3vh;
+  padding: 3vh 0 5vh 0;
+
+  background: #001E08;
 
   clip-path: polygon(
     0 29vh, //1
@@ -61,7 +63,20 @@
     25vw 29vh //9
   );
 
-  background: #001E08;
+
+  @media (max-width: 768px) {
+    clip-path: polygon(
+      0 29vh, //1
+      0% 100%, //2
+      100% 100%, //3
+      100% 29vh, //4
+      90vw 29vh, //5
+      90vw 15vh, //6
+      50vw 0, //7
+      10vw 15vh, //8
+      10vw 29vh //9
+    );
+  }
 }
 
 .content {
