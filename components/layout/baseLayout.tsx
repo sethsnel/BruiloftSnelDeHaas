@@ -10,9 +10,7 @@ type baseLayoutProps = {
 const BaseLayout = ({ children }: baseLayoutProps) => {
   return <div className={styles.container}>
   <Header />
-  <div className={styles.dividerwrapper}>
-    <div className={styles.divider}>
-    </div>
+  <div className={styles.divider}>
   </div>
   <div className={styles.wrapper}>
     <div className={styles.content}>

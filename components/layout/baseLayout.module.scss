@@ -8,73 +8,44 @@
   }
 }
 
-.dividerwrapper {
-  max-height: 30vh;
-  overflow: hidden;
-
-  @media (max-width: 1024px) {
-    max-height: 50vh;
-  }
-  
-  .divider {
-    background: #001E08;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 80vw;
-    min-height: 100vh;
-    margin: 0 auto;
-
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-
-    @media (max-width: 1024px) {
-      width: 100vw;
-      min-height: 100vh;
-      margin: 0 auto -40vh auto;
-    }
-
-    @media (max-width: 768px) {
-      width: 100vw;
-      min-height: 50vh;
-      margin: 0 auto -20vh auto;
-    }
-  }
+.divider {
+  height: 50vw;
+  background: #001E08;
+  clip-path: circle(50vw at 50% 50vw);
 }
 
 .wrapper {
   width: 100%;
   min-height: 75vh;
-  margin-top: -30vh;
+  margin-top: -50vw;
   padding: 3vh 0 5vh 0;
 
   background: #001E08;
 
   clip-path: polygon(
-    0 29vh, //1
+    0 50vw, //1
     0% 100%, //2
     100% 100%, //3
-    100% 29vh, //4
-    75vw 29vh, //5
+    100% 50vw, //4
+    95vw 50vw, //5
     75vw 15vh, //6
-    50vw 0, //7
+    50vw 1vw, //7
     25vw 15vh, //8
-    25vw 29vh //9
+    5vw 50vw //9
   );
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 748px) {
     clip-path: polygon(
-      0 29vh, //1
+      0 50vw, //1
       0% 100%, //2
       100% 100%, //3
-      100% 29vh, //4
-      90vw 29vh, //5
+      100% 50vw, //4
+      95vw 50vw, //5
       90vw 15vh, //6
-      50vw 0, //7
+      50vw 1vw, //7
       10vw 15vh, //8
-      10vw 29vh //9
+      5vw 50vw //9
     );
   }
 }
