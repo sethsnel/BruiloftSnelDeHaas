@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
@@ -15,11 +16,36 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.menuTitle}>Menu</h1>
         <ul className={styles.menu}>
-          <li><a href="#">VUL SAVE THE DATE CODE IN</a></li>
-          <li><a href="#">INFO DAGGASTEN</a></li>
-          <li><a href="#">INFO AVONDGASTEN</a></li>
-          <li><a href="#">INFO RECEPTIE/KERK</a></li>
-          <li><a href="#">Cadeautips</a></li>
+          <li>
+            <Link href="/save-the-date">
+              <a>VUL SAVE THE DATE CODE IN</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/planning">
+              <a>Planning</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/daggast">
+              <a>DAGGASTEN</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/receptie">
+              <a>RECEPTIE/KERK</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/avondgast">
+              <a>AVONDGASTEN</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/cadeaus">
+              <a>Cadeautips</a>
+            </Link>
+          </li>
         </ul>
       </main>
 
