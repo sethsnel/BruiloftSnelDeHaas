@@ -48,7 +48,7 @@
     text-align: center;
     
     background-color: rgba(255,255,255, 0.9);
-    border: 4px solid $textAccent;
+    border: 4px solid $textColor;
     border-radius: 50%;
   }
 
@@ -56,22 +56,37 @@
     content: '👋';
   }
   &.arrival::after {
-    content: '👰';
+    background-image: url('/planning-icons.svg#flowers');
+    background-size: 200px 200px;
+    background-position: -137px -74px;
+    background-repeat: no-repeat;
   }
   &.cake::after {
-    content: '🎂';
+    background-image: url('/planning-icons.svg#cake');
+    background-size: 200px 200px;
+    background-position: -19px -78px;
+    background-repeat: no-repeat;
   }
   &.camera::after {
-    content: '📸';
+    background-image: url('/planning-icons.svg#camera');
+    background-size: 200px 200px;
+    background-position: -78px -115px;
+    background-repeat: no-repeat;
   }
   &.dinner::after {
     content: '🍽️';
   }
   &.church::after {
-    content: '💒';
+    background-image: url('/planning-icons.svg#church');
+    background-size: 200px 200px;
+    background-position: -102px -76px;
+    background-repeat: no-repeat;
   }
   &.drinks::after {
-    content: '🍸';
+    background-image: url('/planning-icons.svg#drinks');
+    background-size: 200px 200px;
+    background-position: -43px -114px;
+    background-repeat: no-repeat;
   }
   &.party::after {
     content: '💃';
