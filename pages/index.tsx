@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -9,9 +8,9 @@ import { codes } from './save-the-date';
 
 
 const useCodes = () => {
+  const router = useRouter()
   const [code, setCode] = useState<string>('')
 
-  const router = useRouter()
   if (codes.includes(code.toUpperCase())) {
     router.push('/save-the-date?code=' + code.toUpperCase())
   }

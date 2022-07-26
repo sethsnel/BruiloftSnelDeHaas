@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import styles from '../styles/Home.module.scss'
 
 export const codes = [
@@ -13,11 +12,9 @@ export const codes = [
 const Home: NextPage = () => {
     const router = useRouter()
 
-    useEffect(() => {
-        if (!codes.includes(router.query.code as string)) {
-            router.push('/')
-        }
-    }, [router.query.code])
+    if (router.query.code !== undefined && !codes.includes(router.query.code as string)) {
+        router.push('/')
+    }
 
     return (
         <div className={styles.container}>
@@ -37,9 +34,13 @@ const Home: NextPage = () => {
                     </li>
                 </ul>
                 <div className='body'>
-                    <video controls>
-                        <source src={`/videos/${router.query.code}.mp4`} type="video/mp4" />
-                    </video>
+                    {
+                        (router.query.code) && (
+                            <video controls>
+                                <source src={`/videos/${router.query.code}.mp4`} type="video/mp4" />
+                            </video>
+                        )
+                    }
                 </div>
             </main>
         </div>
