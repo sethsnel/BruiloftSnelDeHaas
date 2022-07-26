@@ -13,7 +13,7 @@ const useCodes = () => {
 
   const router = useRouter()
   if (codes.includes(code.toUpperCase())) {
-    router.push('/save-the-date?code=' + code)
+    router.push('/save-the-date?code=' + code.toUpperCase())
   }
 
   return (code: string) => { setCode(code) }
