@@ -1,27 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import { codes } from './save-the-date';
-
-
-
-const useCodes = () => {
-  const [code, setCode] = useState<string>('')
-
-  const router = useRouter()
-  if (codes.includes(code.toUpperCase())) {
-    router.push('/save-the-date?code=' + code)
-  }
-
-  return (code: string) => { setCode(code) }
-}
 
 const Home: NextPage = () => {
-  const checkCode = useCodes()
-
   return (
     <div className={styles.container}>
       <Head>
@@ -31,8 +14,39 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.menuTitle}>Code</h1>
-        <input name='code' type='text' onChange={e => checkCode(e.currentTarget.value)} />
+        <h1 className={styles.menuTitle}>Menu</h1>
+        <ul className={styles.menu}>
+          <li>
+            <Link href="/save-the-date">
+              <a>VUL SAVE THE DATE CODE IN</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/planning">
+              <a>Planning</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/daggast">
+              <a>DAGGASTEN</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/receptie">
+              <a>RECEPTIE/KERK</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/avondgast">
+              <a>AVONDGASTEN</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/cadeaus">
+              <a>Cadeautips</a>
+            </Link>
+          </li>
+        </ul>
       </main>
 
       {/* <footer className={styles.footer}>

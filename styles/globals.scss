@@ -10,6 +10,12 @@
   src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
+*:focus {
+  outline-color: $textColor;
+  outline-style: dashed;
+  outline-width: 2px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -44,4 +50,16 @@ ul, ol {
 body video {
   width: 100%;
   height: 100%;
+}
+
+input {
+  font-size: 4em;
+  font-family: PlayfairDisplay;
+
+  text-align: center;
+  text-transform: uppercase;
+  
+  background-color: $backgroundTint;
+  color: $textAccent;
+  border: none;
 }
