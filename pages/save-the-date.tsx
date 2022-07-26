@@ -14,7 +14,7 @@ const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.menuTitle}>Daggast</h1>
+                <h1 className={styles.menuTitle}>Save the date!</h1>
                 <ul className={styles.menu}>
                     <li>
                         <Link href="/">
@@ -23,7 +23,9 @@ const Home: NextPage = () => {
                     </li>
                 </ul>
                 <div className='body'>
-                    <p>Save the date</p>
+                    <video controls>
+                        <source src='/videos/DEKLS.mp4' type="video/mp4" />
+                    </video>
                 </div>
             </main>
         </div>
