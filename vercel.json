@@ -1,0 +1,10 @@
+{
+    "functions": {
+      "pages/index.tsx": {
+        "excludeFiles": "*.mp4"
+      },
+      "pages/save-the-date.tsx": {
+        "excludeFiles": "*.mp4"
+      }
+    }
+  }
