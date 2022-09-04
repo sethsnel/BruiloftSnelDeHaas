@@ -1,9 +1,9 @@
 {
     "functions": {
-      "index.js": {
+      "pages/index.js": {
         "excludeFiles": "*.mp4"
       },
-      "save-the-date.js": {
+      "pages/save-the-date.js": {
         "excludeFiles": "*.mp4"
       }
     }
