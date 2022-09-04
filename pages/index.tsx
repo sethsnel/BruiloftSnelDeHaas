@@ -49,13 +49,26 @@ const Home: NextPage<{ codes: string[]}> = ({ codes }: { codes: string[]}) => {
 }
 
 export async function getStaticProps() {
-  const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
-  //@ts-ignore
-  const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
+  // const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
+  // console.info(process.cwd())
+  // console.info(fileNames)
+  // //@ts-ignore
+  // const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
 
   return {
     props: {
-      codes
+      codes: [
+        'KVRAR', 'XGYYM', 'MYQRT', 'MDGAT',
+        'MKBDU', 'CXCTY', 'GMDJF', 'KQCML',
+        'ATPKR', 'MPPEJ', 'KGTKQ', 'AKUAF',
+        'YHLPR', 'YDFFE', 'SRTYF', 'BZGZR',
+        'RQXFK', 'QYZUT', 'TZXDN', 'HUZYR',
+        'FCQBA', 'BJTNS', 'HEVDZ', 'PXSLL',
+        'ZVHQL', 'LOASE', 'HQSRS', 'BAVEP',
+        'NNYCD', 'TUCBF', 'EUVZA', 'FVZFP',
+        'GXAEP', 'YFLJX', 'DGUGF', 'PJNJL',
+        'EDUEU'
+      ]
     }
   }
 }

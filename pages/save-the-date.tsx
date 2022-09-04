@@ -53,14 +53,64 @@ const Home: NextPage<saveTheDateProps> = ({ fileNames, codes }: saveTheDateProps
 }
 
 export async function getStaticProps() {
-    const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
-    //@ts-ignore
-    const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
-  
+    // const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
+    // //@ts-ignore
+    // const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
+    // console.info(fileNames)
+    // console.info(codes)
     return {
       props: {
-        fileNames,
-        codes
+        fileNames: [
+            'ANNE-REINOUT-KVRAR.mp4',
+            'BERTJAN-XGYYM.mp4',
+            'BOS-MYQRT.mp4',
+            'DAAN-DVK-MDGAT.mp4',
+            'DAAN-S-MKBDU.mp4',
+            'DAAS-CXCTY.mp4',
+            'DIEDERICK-GMDJF.mp4',
+            'DION-KQCML.mp4',
+            'ERIK-ATPKR.mp4',
+            'ERNST-MPPEJ.mp4',
+            'FAM-KOK-KGTKQ.mp4',
+            'FAM-KREUNING-AKUAF.mp4',
+            'FAM-SNEL-YHLPR.mp4',
+            'FEROX-LICHTING-YDFFE.mp4',
+            'FEROX-SRTYF.mp4',
+            'GEZIN-KOK-BZGZR.mp4',
+            'HAAS-RQXFK.mp4',
+            'HUISGENOTEN-ANNE-QYZUT.mp4',
+            'ICHTHUS-TZXDN.mp4',
+            'JOHAN-ADRIE-HUZYR.mp4',
+            'LISANNA-MARCEL-FCQBA.mp4',
+            'LUCAS-BJTNS.mp4',
+            'MARIJKE-RIK-HEVDZ.mp4',
+            'NEEFTJES-LUIT-PXSLL.mp4',
+            'OMA-HAAS-ZVHQL.mp4',
+            'OPA-OMA-LOASE.mp4',
+            'OPAOMA-KOK-HQSRS.mp4',
+            'OPAOMA-LUIT-BAVEP.mp4',
+            'OPAOMA-SNEL-NNYCD.mp4',
+            'RACHEL-TUCBF.mp4',
+            'RUBICON-EUVZA.mp4',
+            'RUTH-FVZFP.mp4',
+            'SNEL-GXAEP.mp4',
+            'STEVEN-YFLJX.mp4',
+            'STUDENTEN-DGUGF.mp4',
+            'THOMAS-PJNJL.mp4',
+            'VPO-EDUEU.mp4'
+          ],
+        codes:[
+            'KVRAR', 'XGYYM', 'MYQRT', 'MDGAT',
+            'MKBDU', 'CXCTY', 'GMDJF', 'KQCML',
+            'ATPKR', 'MPPEJ', 'KGTKQ', 'AKUAF',
+            'YHLPR', 'YDFFE', 'SRTYF', 'BZGZR',
+            'RQXFK', 'QYZUT', 'TZXDN', 'HUZYR',
+            'FCQBA', 'BJTNS', 'HEVDZ', 'PXSLL',
+            'ZVHQL', 'LOASE', 'HQSRS', 'BAVEP',
+            'NNYCD', 'TUCBF', 'EUVZA', 'FVZFP',
+            'GXAEP', 'YFLJX', 'DGUGF', 'PJNJL',
+            'EDUEU'
+          ]
       }
     }
   }
