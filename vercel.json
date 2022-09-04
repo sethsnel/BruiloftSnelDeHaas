@@ -1,9 +1,9 @@
 {
     "functions": {
-      "pages/index.tsx": {
+      "index.js": {
         "excludeFiles": "*.mp4"
       },
-      "pages/save-the-date.tsx": {
+      "save-the-date.js": {
         "excludeFiles": "*.mp4"
       }
     }
