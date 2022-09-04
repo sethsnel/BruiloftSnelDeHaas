@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import styles from '../styles/Home.module.scss';
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import styles from '../styles/Home.module.scss'
 import fs from 'fs'
 
 const useCodes = (codes: string[]) => {
@@ -16,7 +16,7 @@ const useCodes = (codes: string[]) => {
   return (code: string) => { setCode(code) }
 }
 
-const Home: NextPage<{ codes: string[]}> = ({ codes }: { codes: string[]}) => {
+const Home: NextPage<{ codes: string[] }> = ({ codes }: { codes: string[] }) => {
   const checkCode = useCodes(codes)
 
   return (
