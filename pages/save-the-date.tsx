@@ -3,18 +3,23 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import fs from 'fs'
+
 import styles from '../styles/Home.module.scss'
 
-export const codes = [
-    'DEKLS'
-]
+type saveTheDateProps = { 
+    fileNames: string[]
+    codes: string[]
+}
 
-const Home: NextPage = () => {
+const Home: NextPage<saveTheDateProps> = ({ fileNames, codes }: saveTheDateProps) => {
     const router = useRouter()
 
     if (router.query.code !== undefined && !codes.includes(router.query.code as string)) {
         router.push('/')
     }
+
+    const fileName = fileNames.find(fn => fn.includes(router.query.code as string))
 
     return (
         <div className={styles.container}>
@@ -37,14 +42,27 @@ const Home: NextPage = () => {
                     {
                         (router.query.code) && (
                             <video controls>
-                                <source src={`/videos/${router.query.code}.mp4`} type="video/mp4" />
+                                <source src={`/videos/${fileName}`} type="video/mp4" />
                             </video>
                         )
                     }
                 </div>
             </main>
         </div>
-    );
-};
+    )
+}
+
+export async function getStaticProps() {
+    const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
+    //@ts-ignore
+    const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
+  
+    return {
+      props: {
+        fileNames,
+        codes
+      }
+    }
+  }
 
 export default Home

@@ -3,11 +3,9 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from '../styles/Home.module.scss';
-import { codes } from './save-the-date';
+import fs from 'fs'
 
-
-
-const useCodes = () => {
+const useCodes = (codes: string[]) => {
   const router = useRouter()
   const [code, setCode] = useState<string>('')
 
@@ -18,8 +16,8 @@ const useCodes = () => {
   return (code: string) => { setCode(code) }
 }
 
-const Home: NextPage = () => {
-  const checkCode = useCodes()
+const Home: NextPage<{ codes: string[]}> = ({ codes }: { codes: string[]}) => {
+  const checkCode = useCodes(codes)
 
   return (
     <div className={styles.container}>
@@ -47,7 +45,19 @@ const Home: NextPage = () => {
         </a>
       </footer> */}
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export async function getStaticProps() {
+  const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
+  //@ts-ignore
+  const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
+
+  return {
+    props: {
+      codes
+    }
+  }
+}
+
+export default Home
