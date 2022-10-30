@@ -38,6 +38,7 @@
       position: absolute;
       bottom: 2rem;
       left: 1rem;
+      top: 1rem;
 
       background:rgba(255,255,255,0.8);
       width: 95%;
@@ -46,6 +47,7 @@
       @media (max-width: 1024px) {
         height: 80%;
         bottom: 0.6rem;
+        top: 0;
       }
 
       @media (max-width: 768px) {

@@ -1,23 +1,15 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
+import Link from 'next/link'
+
+import useInviteType from '../hooks/useInviteType'
+
 import styles from '../styles/Home.module.scss'
-import fs from 'fs'
 
-const useCodes = (codes: string[]) => {
-  const router = useRouter()
-  const [code, setCode] = useState<string>('')
-
-  if (codes.includes(code.toUpperCase())) {
-    router.push('/save-the-date?code=' + code.toUpperCase())
-  }
-
-  return (code: string) => { setCode(code) }
-}
-
-const Home: NextPage<{ codes: string[] }> = ({ codes }: { codes: string[] }) => {
-  const checkCode = useCodes(codes)
+const Home: NextPage = () => {
+  const { inviteType, updateInviteType } = useInviteType()
+  const hrefInfo = inviteType === 'day' ? '/daggast' : '/avondgast'
 
   return (
     <div className={styles.container}>
@@ -28,49 +20,36 @@ const Home: NextPage<{ codes: string[] }> = ({ codes }: { codes: string[] }) => 
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.menuTitle}>Code</h1>
-        <input name='code' type='text' onChange={e => checkCode(e.currentTarget.value)} />
+        <h1 className={styles.menuTitle}>Home</h1>
+        <ul className={styles.menu}>
+          <li>
+            <Link href='/planning'>
+              <a>Planning</a>
+            </Link>
+          </li>
+          <li>
+            <Link href={hrefInfo}>
+              <a>Informatie</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/cadeaus'>
+              <a>Cadeautips</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/std'>
+              <a>Save the date code</a>
+            </Link>
+          </li>
+        </ul>
       </main>
 
-      {/* <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+      <footer className={styles.footer}>
+        <a onClick={() => { updateInviteType(null); location.reload() }}>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'}</a>
+      </footer>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  // const fileNames = fs.readdirSync(`${process.cwd()}/public/videos`)
-  // console.info(process.cwd())
-  // console.info(fileNames)
-  // //@ts-ignore
-  // const codes = fileNames.map(fn => fn.match(/\-(.{5})\./g)[0].replace('-', '').replace('.', ''))
-
-  return {
-    props: {
-      codes: [
-        'KVRAR', 'XGYYM', 'MYQRT', 'MDGAT',
-        'MKBDU', 'CXCTY', 'GMDJF', 'KQCML',
-        'ATPKR', 'MPPEJ', 'KGTKQ', 'AKUAF',
-        'YHLPR', 'YDFFE', 'SRTYF', 'BZGZR',
-        'RQXFK', 'QYZUT', 'TZXDN', 'HUZYR',
-        'FCQBA', 'BJTNS', 'HEVDZ', 'PXSLL',
-        'ZVHQL', 'LOASE', 'HQSRS', 'BAVEP',
-        'NNYCD', 'TUCBF', 'EUVZA', 'FVZFP',
-        'GXAEP', 'YFLJX', 'DGUGF', 'PJNJL',
-        'EDUEU'
-      ]
-    }
-  }
 }
 
 export default Home

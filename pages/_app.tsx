@@ -1,11 +1,17 @@
-import '../styles/globals.scss'
-import '../styles/timeline.scss'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { BaseLayout } from '../components/layout'
 
+import '../styles/globals.scss'
+import '../styles/timeline.scss'
+import styles from '../styles/Home.module.scss'
+import appStyles from '../styles/App.module.scss'
+import useInviteType from '../hooks/useInviteType'
+
 function MyApp({ Component, pageProps }: AppProps) {
+  const { inviteType, updateInviteType } = useInviteType()
+
   return <BaseLayout>
     <Head>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -16,7 +22,21 @@ function MyApp({ Component, pageProps }: AppProps) {
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
     </Head>
-    <Component {...pageProps} />
+    {
+      (inviteType) ?
+        <Component {...pageProps} /> :
+        (
+          <div className={styles.container}>
+            <main className={styles.main}>
+              <div className={appStyles.inviteContainer}>
+                <button onClick={() => updateInviteType('day')}>Daggast</button>
+                <button onClick={() => updateInviteType('evening')}>Avondgast</button>
+                {/* <button onClick={() => updateInviteType('church')}>Kerk/receptie</button> */}
+              </div>
+            </main>
+          </div>
+        )
+    }
   </BaseLayout>
 }
 
