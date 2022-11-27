@@ -10,7 +10,7 @@ import appStyles from '../styles/App.module.scss'
 import useInviteType from '../hooks/useInviteType'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { inviteType, updateInviteType } = useInviteType()
+  const { inviteType, selectInviteType } = useInviteType()
 
   return <BaseLayout>
     <Head>
@@ -29,8 +29,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <div className={styles.container}>
             <main className={styles.main}>
               <div className={appStyles.inviteContainer}>
-                <button onClick={() => updateInviteType('day')}>Daggast</button>
-                <button onClick={() => updateInviteType('evening')}>Avondgast</button>
+                <button onClick={() => selectInviteType('day')}>Daggast</button>
+                <button onClick={() => selectInviteType('evening')}>Avondgast</button>
                 {/* <button onClick={() => updateInviteType('church')}>Kerk/receptie</button> */}
               </div>
             </main>

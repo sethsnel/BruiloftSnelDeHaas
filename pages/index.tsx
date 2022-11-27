@@ -8,7 +8,7 @@ import useInviteType from '../hooks/useInviteType'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  const { inviteType, updateInviteType } = useInviteType()
+  const { inviteType, resetInviteType } = useInviteType()
   const hrefInfo = inviteType === 'day' ? '/daggast' : '/avondgast'
 
   return (
@@ -23,8 +23,8 @@ const Home: NextPage = () => {
         <h1 className={styles.menuTitle}>Home</h1>
         <ul className={styles.menu}>
           <li>
-            <Link href='/planning'>
-              <a>Planning</a>
+            <Link href={`${hrefInfo}-rsvp`}>
+              <a>RSVP</a>
             </Link>
           </li>
           <li>
@@ -38,15 +38,15 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <li>
-            <Link href='/std'>
-              <a>Save the date code</a>
+            <Link href='/planning'>
+              <a>{inviteType === 'day' ? 'Dagplanning' : 'Avondplanning'}</a>
             </Link>
           </li>
         </ul>
       </main>
 
       <footer className={styles.footer}>
-        <a onClick={() => { updateInviteType(null); location.reload() }}>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'}</a>
+        <a onClick={() => resetInviteType()}>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'}</a>
       </footer>
     </div>
   )

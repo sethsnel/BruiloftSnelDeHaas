@@ -3,7 +3,7 @@
   background-size: cover;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 540px) {
     background-size: contain;
   }
 }
@@ -35,7 +35,7 @@
   );
 
 
-  @media (max-width: 748px) {
+  @media (max-width: 540px) {
     clip-path: polygon(
       0 50vw, //1
       0% 100%, //2
@@ -58,7 +58,7 @@
     width: 80vw;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 540px) {
     width: 95vw;
   }
 }

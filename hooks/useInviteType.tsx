@@ -4,19 +4,21 @@ type inviteType = 'day' | 'evening' | 'church' | null
 
 export default function useInviteType() {
   const [inviteType, setInviteType] = useState<inviteType>('day')
-  const updateInviteType = (inviteType: inviteType) => {
+  const selectInviteType = (inviteType: inviteType) => {
     if (inviteType !== null) {
       localStorage.setItem('inviteType', inviteType)
-    }
-    else {
-      localStorage.removeItem('inviteType')
     }
     setInviteType(inviteType)
   }
 
+  const resetInviteType = () => {
+    localStorage.removeItem('inviteType')
+    location.replace('/')
+  }
+
   useLayoutEffect(() => {
-    updateInviteType(typeof localStorage !== 'undefined' ? localStorage?.getItem('inviteType') as inviteType : null)
+    selectInviteType(typeof localStorage !== 'undefined' ? localStorage?.getItem('inviteType') as inviteType : null)
   }, [])
 
-  return { inviteType, updateInviteType }
+  return { inviteType, selectInviteType, resetInviteType }
 }

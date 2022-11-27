@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { AiOutlineRollback } from 'react-icons/ai'
 
 import styles from '../styles/Home.module.scss'
+import rsvpStyles from '../styles/rsvp.module.scss'
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.menuTitle}>Cadeaus</h1>
+        <h1 className={styles.menuTitle}>Daggast</h1>
         <ul className={styles.menu}>
           <li>
             <Link href="/">
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
           </li>
         </ul>
         <div className='body'>
-          <p>Cadeaus</p>
+          <iframe className={rsvpStyles.form} src="https://docs.google.com/forms/d/e/1FAIpQLScynk6Z9641Q3ZJ4KJ1-1v6PpnC4J1Swa3DtueKbkD04KYSCg/viewform?embedded=true" width="380" height="2106" frameBorder="0">Laden…</iframe>
         </div>
       </main>
     </div>

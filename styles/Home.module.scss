@@ -10,14 +10,14 @@
   justify-content: center;
   align-items: center;
 
-  border-bottom: 2px solid #eaeaea;
+  // border-bottom: 2px solid #eaeaea;
 }
 
 .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  // border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }
@@ -47,6 +47,9 @@
   text-transform: uppercase;
 
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
   }
 
