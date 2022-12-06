@@ -4,9 +4,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { AiOutlineRollback } from 'react-icons/ai'
 import { MdWavingHand } from 'react-icons/md'
-import { IoMdBoat, IoMdWine } from 'react-icons/io'
+import { IoMdBoat } from 'react-icons/io'
 import { GiMeal, GiPartyPopper } from 'react-icons/gi'
-import { FaChurch } from 'react-icons/fa'
+import { FaChurch, FaGlassCheers } from 'react-icons/fa'
 
 import useInviteType from '../hooks/useInviteType'
 
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
             </div>
             <div className="container drinks">
               <div className='icon'>
-                <IoMdWine />
+                <FaGlassCheers />
               </div>
               <div className="content">
                 <h3>20.00</h3>
