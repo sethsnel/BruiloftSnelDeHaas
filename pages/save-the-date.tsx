@@ -41,7 +41,6 @@ const Home: NextPage<saveTheDateProps> = ({
       <Head>
         <title>Bruiloft Snel de Haas</title>
         <meta name='description' content='Bruiloft Snel de Haas' />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
