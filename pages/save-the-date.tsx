@@ -48,7 +48,7 @@ const Home: NextPage<saveTheDateProps> = ({
         <ul className={styles.menu}>
           <li>
             <Link href='/'>
-              <a>Home</a>
+              Home
             </Link>
           </li>
         </ul>

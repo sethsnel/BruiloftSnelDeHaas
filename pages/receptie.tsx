@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <ul className={styles.menu}>
           <li>
             <Link href="/">
-              <a><AiOutlineRollback /> home</a>
+              <AiOutlineRollback /> home
             </Link>
           </li>
         </ul>

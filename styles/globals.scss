@@ -97,20 +97,17 @@ input {
 }
 
 button {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-family: PlayfairDisplay;
-  font-size: 18px;
+  font-size: 24px;
+  border-radius: 16px;
 
-  background: $textAccent;
+  background: rgba(255, 255, 255, 0.15);
   border: 0;
-  color: white;
+  color: $textColor;
   cursor: pointer;
 
-  outline-color: $textColor;
-  outline-style: solid;
-  outline-width: 2px;
-
   &:hover {
-    outline-width: 0;
+    background: rgba(255, 255, 255, 0.2);
   }
 }

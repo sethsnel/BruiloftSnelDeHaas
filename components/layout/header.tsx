@@ -6,7 +6,7 @@ const header = () => {
     <h1 className={`${styles.title} ${styles.text}`}>
       <span>
         <Link href="/">
-          <a>Seth & Annemijn</a>
+          Seth & Annemijn
         </Link>
       </span>
     </h1>

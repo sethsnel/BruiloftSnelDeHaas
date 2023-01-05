@@ -19,12 +19,12 @@ const Home: NextPage = () => {
         <ul className={styles.menu}>
           <li>
             <Link href="/">
-              <a><AiOutlineRollback /> home</a>
+              <AiOutlineRollback /> home
             </Link>
           </li>
         </ul>
         <div className='body'>
-          <p>Cadeaus</p>
+          <p>Bekijk ons verlanglijstje op <a href="https://www.lijstje.nl/sneldehaas" target="_blank" rel="noreferrer">lijstje.nl/sneldehaas</a></p>
         </div>
       </main>
     </div>

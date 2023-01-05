@@ -1,18 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import { AiOutlineRollback } from 'react-icons/ai'
-import { BsEnvelope } from 'react-icons/bs'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import { AiOutlineRollback } from "react-icons/ai";
+import { BsEnvelope } from "react-icons/bs";
 
-import styles from '../styles/Home.module.scss'
+import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Bruiloft Snel de Haas</title>
-        <meta name='description' content='Bruiloft Snel de Haas' />
+        <meta name="description" content="Bruiloft Snel de Haas" />
       </Head>
 
       <main className={styles.main}>
@@ -20,68 +20,69 @@ const Home: NextPage = () => {
         <ul className={styles.menu}>
           <li>
             <Link href="/">
-              <a><AiOutlineRollback /> home</a>
+              <AiOutlineRollback /> home
             </Link>
           </li>
         </ul>
-        <div className='body'>
-          <h2>
-            Stukjes
-          </h2>
+        <div className="body">
+          <h2>Stukjes & Speeches</h2>
           <p>
-            Wil je op de dag zelf een leuke bijdrage leveren? Laat het ons dan weten
-            vóór 9 mei in verband met de beperkte ruimte in de planning van de dag.
-            Houdt er ook rekening mee dat er in principe geen beamer beschikbaar is.
+            Wil je op de dag zelf een leuke bijdrage leveren? Laat het ons dan
+            weten vóór maandag 24 april in verband met de beperkte ruimte in de
+            planning van de dag. Houd er rekening mee dat er geen beamer
+            beschikbaar is.
           </p>
-          <h2>
-            Kleding
-          </h2>
+          <h2>Kleding</h2>
           <p>
-            Een gedeelte van de dag vindt buiten plaats, zorg dus voor passende kleding
-            bij het weer. Het bruidspaar vindt het daarnaast leuk als je feestelijke
-            kleding aandoet.
+            Bij mooi weer vindt de receptie buiten plaats, zorg dus voor
+            passende kleding bij het weer. Het bruidspaar vindt het daarnaast
+            leuk als je feestelijke kleding aandoet.
           </p>
-          <h2>
-            Cadeau
-          </h2>
+          <h2>Cadeau</h2>
           <p>
-            Mocht je een cadeau willen geven en zoek je nog inspiratie? Cadeautip: <BsEnvelope />
+            Mocht je een cadeau willen geven en zoek je nog inspiratie?
+            Cadeautip: <BsEnvelope />
           </p>
           <p>
-            Vind je het leuker om een fysiek cadeau te geven, dan kun je op
-            sneldehaas.nl een verlanglijstje van het bruidspaar vinden.
+            Vind je het leuker om een fysiek cadeau te geven, dan kun je op{" "}
+            <a
+              href="https://www.lijstje.nl/sneldehaas"
+              target="_blank"
+              rel="noreferrer"
+            >
+              lijstje.nl/sneldehaas
+            </a>{" "}
+            een verlanglijstje van het bruidspaar vinden.
           </p>
-          <h2>
-            Foto’s en filmpjes
-          </h2>
+          <h2>Foto's en filmpjes</h2>
           <p>
-            Het bruidspaar wil alle gasten vragen om niet zelf foto’s of filmpjes te
-            maken. Er zal een fotograaf aanwezig zijn die de dag van begin tot eind
-            vast zal leggen.
+            Er zal een fotograaf aanwezig zijn om de bruiloft vast te leggen.
+            Het bruidspaar verzoekt alle gasten om zelf geen foto's of filmpjes
+            te maken.
           </p>
-          <h2>
-            Tot slot
-          </h2>
+          <h2>Tot slot</h2>
           <p>
-            We hopen natuurlijk dat je erbij bent op deze prachtige dag. Mocht je
-            echter niet aanwezig kunnen zijn, wil je dit dan zo snel mogelijk, maar
-            uiterlijk voor 1 mei laten weten op <a href="mailto:bruidspaar@sneldehaas.nl">bruidspaar@sneldehaas.nl</a>. Ook
-            als je een deel van het programma moet missen, is het fijn als je dit
-            doorgeeft.
+            We hopen natuurlijk dat je erbij bent op deze prachtige dag. We
+            willen je daarom vragen om je aan- of afwezigheid door te geven via
+            de <Link href="/avondgast-rsvp">RSVP</Link>. Doe dit zo snel
+            mogelijk, maar in ieder geval voor maandag 24 april.
           </p>
-          <h2>
-            Contact
-          </h2>
+          <h2>Contact</h2>
           <p>
-            Seth en Annemijn: <a href="mailto:bruidspaar@sneldehaas.nl">bruidspaar@sneldehaas.nl</a>
-          </p>
-          <p>
-            Erik-Jan en Marijke: <a href="mailto:ceremoniemeesters@sneldehaas.nl">ceremoniemeesters@sneldehaas.nl</a>
+            Seth en Annemijn:{" "}
+            <a href="mailto:bruidspaar@sneldehaas.nl">
+              bruidspaar@sneldehaas.nl
+            </a>
+            <br />
+            Erik-Jan en Marijke:{" "}
+            <a href="mailto:ceremoniemeesters@sneldehaas.nl">
+              ceremoniemeesters@sneldehaas.nl
+            </a>
           </p>
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

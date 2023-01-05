@@ -1,14 +1,6 @@
 .inviteContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 2em;
-  gap: 1em;
-
-  button {
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 300px) {
-    flex-direction: column;
-  }
+  gap: 2em;
 }

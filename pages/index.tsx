@@ -23,29 +23,29 @@ const Home: NextPage = () => {
         <ul className={styles.menu}>
           <li>
             <Link href={`${hrefInfo}-rsvp`}>
-              <a>RSVP</a>
+              RSVP
             </Link>
           </li>
           <li>
             <Link href={hrefInfo}>
-              <a>Informatie</a>
+              Informatie
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href='/cadeaus'>
-              <a>Cadeautips</a>
+              Cadeautips
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href='/planning'>
-              <a>{inviteType === 'day' ? 'Dagplanning' : 'Avondplanning'}</a>
+              Planning
             </Link>
           </li>
         </ul>
       </main>
 
       <footer className={styles.footer}>
-        <a onClick={() => resetInviteType()}>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'}</a>
+      <p>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'} (<a onClick={() => resetInviteType()} href="#">wijzig</a>)</p>
       </footer>
     </div>
   )

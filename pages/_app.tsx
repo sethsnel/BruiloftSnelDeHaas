@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         (
           <div className={styles.container}>
             <main className={styles.main}>
+              <h1 className={styles.menuTitle}>Welkom</h1>
               <div className={appStyles.inviteContainer}>
                 <button onClick={() => selectInviteType('day')}>Daggast</button>
                 <button onClick={() => selectInviteType('evening')}>Avondgast</button>
