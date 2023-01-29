@@ -1,20 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import { AiOutlineRollback } from "react-icons/ai";
-import { MdWavingHand } from "react-icons/md";
-import { IoMdBoat } from "react-icons/io";
-import { GiMeal, GiPartyPopper } from "react-icons/gi";
-import { FaChurch, FaGlassCheers } from "react-icons/fa";
+import type { NextPage } from "next"
+import Head from "next/head"
+import Link from "next/link"
+import { AiOutlineRollback } from "react-icons/ai"
+import { MdWavingHand } from "react-icons/md"
+import { IoMdBoat } from "react-icons/io"
+import { GiMeal, GiPartyPopper } from "react-icons/gi"
+import { FaChurch, FaGlassCheers } from "react-icons/fa"
 
-import useInviteType from "../hooks/useInviteType";
+import useInviteType from "../hooks/useInviteType"
 
-import styles from "../styles/Home.module.scss";
-import planningStyles from "../styles/planning.module.scss";
+import styles from "../styles/Home.module.scss"
+import planningStyles from "../styles/planning.module.scss"
 
 const Home: NextPage = () => {
-  const { inviteType } = useInviteType();
+  const { inviteType } = useInviteType()
 
   return (
     <div className={styles.container}>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <h1 className={styles.menuTitle}>Planning</h1>
         <ul className={styles.menu}>
           <li>
-            <Link href="/" className="link">
+            <Link className="link" href="/">
               <AiOutlineRollback /> home
             </Link>
           </li>
@@ -158,7 +158,7 @@ const Home: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react"
 
-type inviteType = 'day' | 'evening' | 'church' | null
+export type inviteType = 'day' | 'evening' | 'church' | null
 
 export default function useInviteType() {
   const [inviteType, setInviteType] = useState<inviteType>('day')

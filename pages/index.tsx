@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -43,10 +44,6 @@ const Home: NextPage = () => {
           </li>
         </ul>
       </main>
-
-      <footer className={styles.footer}>
-      <p>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'} (<a onClick={() => resetInviteType()} href="#">wijzig</a>)</p>
-      </footer>
     </div>
   )
 }
