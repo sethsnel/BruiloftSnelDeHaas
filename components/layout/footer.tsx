@@ -1,14 +1,20 @@
 import Image from 'next/legacy/image'
 
+import useInviteType, { inviteType } from '../../hooks/useInviteType'
+
 import styles from '../../styles/Home.module.scss'
 
-const footer = ({ inviteType, resetInviteType }: { inviteType: 'day' | 'evening' | 'church' | null, resetInviteType: () => void }) => {
+const Footer = ({ selectInviteType }: { selectInviteType: (type: inviteType) => void }) => {
+  const { inviteType } = useInviteType()
+
   return <footer className={styles.footer}>
-    <p>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'} (<a onClick={() => resetInviteType()} href="#">wijzig</a>)</p>
+    {
+      inviteType !== '' && <p>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'} (<a onClick={() => selectInviteType('')} href="#">wijzig</a>)</p>
+    }
     <div className={styles.footerImage}>
-      <Image src="/seth-en-annemijn.JPG" alt="Seth en Annemijn" width="250" height="250" objectFit='cover' />
+      <Image src="/seth-en-annemijn.png" alt="Seth en Annemijn" width="250" height="280" objectFit='cover' />
     </div>
   </footer>
 }
 
-export default footer
+export default Footer

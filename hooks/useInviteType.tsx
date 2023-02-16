@@ -1,24 +1,10 @@
-import { useLayoutEffect, useState } from "react"
+import { createContext, useContext } from "react"
 
-export type inviteType = 'day' | 'evening' | 'church' | null
+export type inviteType = 'day' | 'evening' | 'church' | ''
+
+export const InviteContext = createContext<inviteType>('')
 
 export default function useInviteType() {
-  const [inviteType, setInviteType] = useState<inviteType>('day')
-  const selectInviteType = (inviteType: inviteType) => {
-    if (inviteType !== null) {
-      localStorage.setItem('inviteType', inviteType)
-    }
-    setInviteType(inviteType)
-  }
-
-  const resetInviteType = () => {
-    localStorage.removeItem('inviteType')
-    location.replace('/')
-  }
-
-  useLayoutEffect(() => {
-    selectInviteType(typeof localStorage !== 'undefined' ? localStorage?.getItem('inviteType') as inviteType : null)
-  }, [])
-
-  return { inviteType, selectInviteType, resetInviteType }
+  const inviteType = useContext<inviteType>(InviteContext)
+  return { inviteType }
 }

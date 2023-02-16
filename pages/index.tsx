@@ -9,7 +9,7 @@ import useInviteType from '../hooks/useInviteType'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  const { inviteType, resetInviteType } = useInviteType()
+  const { inviteType } = useInviteType()
   const hrefInfo = inviteType === 'day' ? '/daggast' : '/avondgast'
 
   return (
