@@ -12,7 +12,7 @@ const Footer = ({ selectInviteType }: { selectInviteType: (type: inviteType) => 
       inviteType !== '' && <p>Ik ben: {inviteType === 'day' ? 'Daggast' : 'Avondgast'} (<a onClick={() => selectInviteType('')} href="#">wijzig</a>)</p>
     }
     <div className={styles.footerImage}>
-      <Image src="/seth-en-annemijn.png" alt="Seth en Annemijn" width="250" height="280" objectFit='cover' />
+      <Image src="/seth-en-annemijn.png" alt="Seth en Annemijn" width="250" height="250" objectFit='cover' />
     </div>
   </footer>
 }

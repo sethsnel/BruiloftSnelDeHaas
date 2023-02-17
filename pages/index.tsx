@@ -9,8 +9,7 @@ import useInviteType from '../hooks/useInviteType'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  const { inviteType } = useInviteType()
-  const hrefInfo = inviteType === 'day' ? '/daggast' : '/avondgast'
+  const { inviteType, href } = useInviteType()
 
   return (
     <div className={styles.container}>
@@ -23,12 +22,12 @@ const Home: NextPage = () => {
         <h1 className={styles.menuTitle}>Home</h1>
         <ul className={styles.menu}>
           <li>
-            <Link href={`${hrefInfo}-rsvp`}>
+            <Link href={`/${href}-rsvp`}>
               RSVP
             </Link>
           </li>
           <li>
-            <Link href={hrefInfo}>
+            <Link href={`/${href}`}>
               Informatie
             </Link>
           </li>

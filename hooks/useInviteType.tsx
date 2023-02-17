@@ -6,5 +6,8 @@ export const InviteContext = createContext<inviteType>('')
 
 export default function useInviteType() {
   const inviteType = useContext<inviteType>(InviteContext)
-  return { inviteType }
+
+  const href = inviteType === 'day' ? 'daggast' : 'avondgast'
+
+  return { inviteType, href }
 }

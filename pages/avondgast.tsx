@@ -2,12 +2,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { AiOutlineRollback } from "react-icons/ai";
 import { BsEnvelope } from "react-icons/bs";
+
+import useInviteType from "../hooks/useInviteType";
 
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
+  const { inviteType, href } = useInviteType()
+  const { push } = useRouter()
+
+  if (inviteType === 'day') {
+    push(`/${href}`)
+  }
+  
   return (
     <div className={styles.container}>
       <Head>
