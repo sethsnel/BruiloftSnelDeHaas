@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           </li>
         </ul>
         <div className='body'>
-          <iframe className={rsvpStyles.form} src="https://docs.google.com/forms/d/e/1FAIpQLScynk6Z9641Q3ZJ4KJ1-1v6PpnC4J1Swa3DtueKbkD04KYSCg/viewform?embedded=true" width="380" height="2106" frameBorder="0">Laden…</iframe>
+          <iframe className={rsvpStyles.form} src="https://docs.google.com/forms/d/e/1FAIpQLScynk6Z9641Q3ZJ4KJ1-1v6PpnC4J1Swa3DtueKbkD04KYSCg/viewform?embedded=true" width="380" height="500" frameBorder="0">Laden…</iframe>
         </div>
       </main>
     </div>
