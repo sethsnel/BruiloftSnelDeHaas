@@ -11,10 +11,10 @@ import appStyles from '../styles/App.module.scss'
 import { InviteContext, inviteType } from '../hooks/useInviteType'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [inviteType, setInviteType] = useState<inviteType>('')
+  const [inviteType, setInviteType] = useState<inviteType>(null)
 
   const selectInviteType = (newType: inviteType) => {
-    localStorage.setItem('inviteType', newType ?? '')
+    localStorage.setItem('inviteType', JSON.stringify(newType ?? null))
     setInviteType(newType)
   }
 
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       {
-        (inviteType !== '') ?
+        (inviteType !== null) ?
           <Component {...pageProps} /> :
           (
             <div className={styles.container}>
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 function InvitePicker({ selectInviteType }: { selectInviteType: (type: inviteType) => void }) {
   useEffect(() => {
-    selectInviteType(typeof localStorage !== 'undefined' ? localStorage?.getItem('inviteType') as inviteType : '')
+    selectInviteType(JSON.parse(localStorage.getItem('inviteType') ?? 'null') as inviteType)
   }, [selectInviteType])
 
   return <>
