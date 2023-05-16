@@ -119,7 +119,7 @@ const Home: NextPage = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.google.nl/maps/place/Rederij+Stichtse+Vecht/@52.1420583,5.0372333,17z/data=!3m1!4b1!4m5!3m4!1s0x47c671d8ab0d682b:0x61ea0e95e8eaf2d2!8m2!3d52.142055!4d5.039422"
+                href="https://www.google.nl/maps/place/Rederij+Stichtse+Vecht+opstapplaats/@52.1316505,5.0491531,17z/data=!4m14!1m7!3m6!1s0x47c671d8ab0d682b:0x61ea0e95e8eaf2d2!2sRederij+Stichtse+Vecht!8m2!3d52.142055!4d5.039422!16s%2Fg%2F1ptxcbt7v!3m5!1s0x47c66e2de368d28b:0x8d332e78be9f2923!8m2!3d52.130817!4d5.0499426!16s%2Fg%2F11c0xst5xk"
               >
                 Rederij Stichtse Vecht, 3604 BA Maarssen
               </a>
