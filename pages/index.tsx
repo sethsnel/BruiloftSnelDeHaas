@@ -20,7 +20,10 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.menuTitle}>Home</h1>
-        <ul className={styles.menu}>
+        <p>Bedankt lieve mensen voor jullie bijdrage aan onze bruiloft!</p>
+        <p><a href="http://www.gerbenpul.nl/album/preview-seth-en-annemijn">Klik hier</a> voor een preview van de foto's.</p>
+        <p> Met denk aan <a href="https://www.gerbenpul.nl" target="blank">Gerben Pul fotografie</a></p>
+        {/* <ul className={styles.menu}>
           <li>
             <Link href={`/${href}-rsvp`}>
               RSVP
@@ -35,13 +38,13 @@ const Home: NextPage = () => {
             <Link href='/cadeaus'>
               Cadeautips
             </Link>
-          </li> */}
+          </li> /}
           <li>
             <Link href='/planning'>
               Planning
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </main>
     </div>
   )

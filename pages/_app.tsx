@@ -31,21 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      {
-        (inviteType !== null) ?
-          <Component {...pageProps} /> :
-          (
-            <div className={styles.container}>
-              <main className={styles.main}>
-                <h1 className={styles.menuTitle}>Welkom</h1>
-                <div className={appStyles.inviteContainer}>
-                  <InvitePicker selectInviteType={selectInviteType} />
-                  {/* <button onClick={() => updateInviteType('church')}>Kerk/receptie</button> */}
-                </div>
-              </main>
-            </div>
-          )
-      }
+      <Component {...pageProps} />
     </BaseLayout>
   </InviteContext.Provider>
 }
