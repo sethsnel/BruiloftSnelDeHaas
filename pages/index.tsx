@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <h1 className={styles.menuTitle}>Home</h1>
         <p>Bedankt lieve mensen voor jullie bijdrage aan onze bruiloft!</p>
         <p><a href="http://www.gerbenpul.nl/album/preview-seth-en-annemijn">Klik hier</a> voor een preview van de foto's.</p>
-        <p> Met denk aan <a href="https://www.gerbenpul.nl" target="blank">Gerben Pul fotografie</a></p>
+        <p> Met dank aan <a href="https://www.gerbenpul.nl" target="blank">Gerben Pul fotografie</a></p>
         {/* <ul className={styles.menu}>
           <li>
             <Link href={`/${href}-rsvp`}>
