@@ -64,6 +64,17 @@ ul, ol {
 
 .body {
   margin-top: 2em;
+  width: 100%;
+}
+
+.img-container {
+  margin-top: 2em;
+  position: relative;
+  height: 300px;
+  
+  @media (orientation: portrait) {
+    height: 175px;
+  }
 }
 
 p {

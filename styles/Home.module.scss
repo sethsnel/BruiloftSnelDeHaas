@@ -31,12 +31,20 @@
 //   flex-grow: 1;
 // }
 
+// .footerImage {
+//   border-radius: 50%;
+//   transform: translate(-50%, -50%);
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+
+//   img {
+//     border-radius: 50%;
+//   }
+// }
+
 .footerImage {
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 0;
-  left: 50%;
+  margin-top: 3em;
 
   img {
     border-radius: 50%;
