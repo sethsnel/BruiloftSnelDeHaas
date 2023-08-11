@@ -5,9 +5,20 @@ import { useRouter } from "next/router";
 
 import styles from "../styles/Home.module.scss";
 import appStyles from "../styles/App.module.scss";
-import { getAllLocaties, getLocatieData } from "../lib/locaties";
+import {
+  getPathsLocaties,
+  getLocatieFotosPaden,
+  getLocatieFotos,
+  getLocatieData,
+} from "../lib/locaties";
 
-const Locatie: NextPage<{ data: any }> = ({ data }: { data: any }) => {
+const Locatie: NextPage<{ data: any; heeftFotos: boolean }> = ({
+  data,
+  heeftFotos,
+}: {
+  data: any;
+  heeftFotos: boolean;
+}) => {
   const router = useRouter();
   return (
     <div className={styles.container}>
@@ -19,9 +30,11 @@ const Locatie: NextPage<{ data: any }> = ({ data }: { data: any }) => {
       <main className={styles.main}>
         <h1 className={styles.menuTitle}>{data.title}</h1>
         <div className={appStyles.inviteContainer}>
-          <button onClick={() => router.push(`${data.locatie}/fotos`)}>
-            Oude foto's
-          </button>
+          {heeftFotos && (
+            <button onClick={() => router.push(`${data.locatie}/fotos`)}>
+              Oude foto's
+            </button>
+          )}
         </div>
         <div className="body">{data.content}</div>
       </main>
@@ -32,7 +45,7 @@ const Locatie: NextPage<{ data: any }> = ({ data }: { data: any }) => {
 export default Locatie;
 
 export function getStaticPaths() {
-  const paths = getAllLocaties();
+  const paths = getPathsLocaties();
   return {
     paths,
     fallback: false,
@@ -41,9 +54,12 @@ export function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: any }) {
   const data = getLocatieData(params.locatie);
+  const fotos = getLocatieFotosPaden();
+
   return {
     props: {
       data,
+      heeftFotos: fotos.includes(params.locatie),
     },
   };
 }

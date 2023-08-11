@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import {
-  getAllLocaties,
+  getPathsFotos,
   getLocatieData,
   getLocatieFotos,
 } from "../../lib/locaties";
@@ -55,7 +55,7 @@ const Locatie: NextPage<{ data: any; fotos: string[] }> = ({ data, fotos }: { da
 export default Locatie;
 
 export function getStaticPaths() {
-  const paths = getAllLocaties();
+  const paths = getPathsFotos();
 
   return {
     paths,

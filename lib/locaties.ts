@@ -5,7 +5,7 @@ import matter from "gray-matter";
 const locatiesDirectory = path.join(process.cwd(), "locaties");
 const fotosDirectory = path.join(process.cwd(), "public/locaties");
 
-export function getAllLocaties() {
+export function getPathsLocaties() {
   const fileNames = fs.readdirSync(locatiesDirectory);
 
   return fileNames.map((fileName) => {
@@ -28,6 +28,20 @@ export function getLocatieData(locatie: string) {
     content: matterResult.content,
     ...matterResult.data,
   };
+}
+
+export function getLocatieFotosPaden() {
+  return fs.readdirSync(fotosDirectory);
+}
+
+export function getPathsFotos() {
+  return getLocatieFotosPaden().map((fileName) => {
+    return {
+      params: {
+        locatie: fileName,
+      },
+    };
+  });
 }
 
 export function getLocatieFotos(locatie: string) {
