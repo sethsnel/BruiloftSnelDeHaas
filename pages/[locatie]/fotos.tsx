@@ -12,14 +12,13 @@ import {
 import styles from "../../styles/Home.module.scss";
 import appStyles from "../../styles/App.module.scss";
 
-const Locatie: NextPage = ({ data, fotos }: { data: any; fotos: string[] }) => {
+const Locatie: NextPage<{ data: any; fotos: string[] }> = ({ data, fotos }: { data: any; fotos: string[] }) => {
   const router = useRouter();
 
   const images = fotos.map((foto: string) => {
     return (
-      <div className="img-container">
+      <div key={foto} className="img-container">
         <Image
-          key={foto}
           src={foto}
           alt={data.title}
           fill={true}

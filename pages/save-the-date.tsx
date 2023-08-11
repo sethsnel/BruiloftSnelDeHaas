@@ -53,11 +53,11 @@ const Home: NextPage<saveTheDateProps> = ({
           </li>
         </ul>
         <div className='body'>
-          {router.query.code && (
-            // <video controls>
-            //   <source src={`/videos/${fileName}`} type='video/mp4' />
-            // </video>
-          )}
+          {/* {router.query.code && (
+            <video controls>
+              <source src={`/videos/${fileName}`} type='video/mp4' />
+            </video>
+          )} */}
         </div>
         <p>Beste {isDayGuest ? 'daggast' : 'avondgast'},</p>
         <p>Aanvullende informatie:</p>

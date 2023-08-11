@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.scss";
 import appStyles from "../styles/App.module.scss";
 import { getAllLocaties, getLocatieData } from "../lib/locaties";
 
-const Locatie: NextPage = ({ data }: { data: any }) => {
+const Locatie: NextPage<{ data: any }> = ({ data }: { data: any }) => {
   const router = useRouter();
   return (
     <div className={styles.container}>
