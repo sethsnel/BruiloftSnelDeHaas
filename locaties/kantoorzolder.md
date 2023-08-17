@@ -1,5 +1,5 @@
 ---
-title: Kantoor zolder
+title: Kantoor Seth
 ---
 
 Seth's kantoor zolder

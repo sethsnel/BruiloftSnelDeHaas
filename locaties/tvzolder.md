@@ -1,5 +1,5 @@
 ---
-title: Bioscoop zolder
+title: Bioscoop
 ---
 
 Bioscoop zolder

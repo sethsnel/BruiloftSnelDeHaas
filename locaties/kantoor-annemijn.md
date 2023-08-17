@@ -1,5 +1,5 @@
 ---
-title: Kantoor Annemijn
+title: Annemijn
 ---
 
 Kantoor Annemijn

@@ -17,6 +17,10 @@ export function getPathsLocaties() {
   });
 }
 
+export function getPathsCount() {
+  return fs.readdirSync(locatiesDirectory).length;
+}
+
 export function getLocatieData(locatie: string) {
   const fullPath = path.join(locatiesDirectory, `${locatie}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
