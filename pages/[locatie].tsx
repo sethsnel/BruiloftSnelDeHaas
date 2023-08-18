@@ -50,7 +50,6 @@ export default Locatie;
 
 export function getStaticPaths() {
   const paths = getPathsLocaties();
-  console.log(paths);
   return {
     paths,
     fallback: false,
