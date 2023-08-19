@@ -39,7 +39,7 @@ const Locatie: NextPage<LocatieProps> = ({
             </button>
           )}
         </div>
-        <div className="body">{data.content}</div>
+        <div className="body" dangerouslySetInnerHTML={{ __html: data.content }} />
         <div className={appStyles.inviteContainer}>{aantalLocatiesBezocht} / {aantalLocaties}</div>
       </main>
     </div>
