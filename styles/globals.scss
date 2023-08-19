@@ -72,9 +72,9 @@ ul, ol {
   position: relative;
   height: 300px;
   
-  @media (orientation: portrait) {
-    height: 175px;
-  }
+  // @media (orientation: portrait) {
+  //   height: 175px;
+  // }
 }
 
 p {
